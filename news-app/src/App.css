@@ -194,3 +194,20 @@ button:focus {
   height: 40px;
   width: 40px;
 }
+
+.the-title {
+  font-size: 1rem !important;
+  color: var(--header-color);
+  font-weight: 800;
+}
+.the-date {
+  font-size: 1rem !important;
+  float: right;
+  color: var(--text-color-light);
+  font-weight: 300 !important;
+}
+
+.app-body {
+  padding-top: var(--default-pad-med);
+}
+
