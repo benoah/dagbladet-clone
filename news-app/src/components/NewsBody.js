@@ -1,18 +1,51 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { baseUrl } from "../settings/api.js";
+import { Container, Image, Card, Button } from "react-bootstrap/";
 
 export default function NewsBody() {
-  const [data, setData] = useState([]);
+  const [col1, setData] = useState([]);
+  const [inputValue, setInputValue] = useState("");
+
+  // Input Field handler
+  const handleUserInput = (e) => {
+    setInputValue(e.target.value);
+  };
+
+  // Reset Input Field handler
+  const resetInputField = () => {
+    setInputValue("");
+  };
 
   useEffect(() => {
-    fetch("https://storage.googleapis.com/aller-structure-task/test_data.json")
-      .then((response) => response.json())
-      .then((data) => setData(data));
-  }, []);
+    const fetchData = async () => {
+      const res = await fetch(
+        "https://storage.googleapis.com/aller-structure-task/test_data.json"
+      );
+      const data = await res.json();
+      const col1 = data[0][0].columns;
+      setData(col1);
+    };
+    fetchData();
+  }, [setData]);
+
   return (
-    <div className="characters">
-      <ul></ul>
-    </div>
+    <Container className="NewsHolder">
+      <div className="row">
+        {col1.map((item) => (
+          <div style={{ height: "100%" }} className="col-md-4 ">
+            <Card>
+              <Image style={{ height: "10rem" }} src={item.imageUrl} />
+              <Card.Body>
+                <p>
+                  {item.title}
+                </p>
+
+                <Button variant="primary">Go somewhere</Button>
+              </Card.Body>
+            </Card>
+            <p></p>
+          </div>
+        ))}
+      </div>
+    </Container>
   );
 }

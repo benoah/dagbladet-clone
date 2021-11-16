@@ -211,3 +211,6 @@ button:focus {
   padding-top: var(--default-pad-med);
 }
 
+.NewsHolder {
+  margin-top: 24px;
+}

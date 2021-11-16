@@ -4,12 +4,12 @@ export default function Header() {
   return (
     <header className="app-header">
       <div className="container">
-        <div className="container-col">
-          <a href="/" className="app-logo">
+        <div className="col">
+          <a href="/" class="app-logo">
             <span className="screen-only">Dagbladet</span>
           </a>
         </div>
-        <div className="container-col">
+        <div className="col">
           <ul className="main-nav">
             <li>
               <a href="/" class="account-link">
@@ -48,12 +48,12 @@ export default function Header() {
           </ul>
         </div>
          {" "}
-        <div className="container-col">
+        <div className="col">
           <button id="jsThemeToggle" class="toggle-theme">
             <span className="screen-only">Toggle theme</span>
           </button>
         </div>
-        <div className="container-col">
+        <div className="col">
           <form action="post" className="search">
             <input
               type="text"
