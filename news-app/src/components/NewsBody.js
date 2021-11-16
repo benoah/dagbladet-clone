@@ -3,17 +3,6 @@ import { Container, Image, Card, Button } from "react-bootstrap/";
 
 export default function NewsBody() {
   const [col1, setData] = useState([]);
-  const [inputValue, setInputValue] = useState("");
-
-  // Input Field handler
-  const handleUserInput = (e) => {
-    setInputValue(e.target.value);
-  };
-
-  // Reset Input Field handler
-  const resetInputField = () => {
-    setInputValue("");
-  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,11 +24,7 @@ export default function NewsBody() {
             <Card>
               <Image style={{ height: "10rem" }} src={item.imageUrl} />
               <Card.Body>
-                <p>
-                  {item.title}
-                </p>
-
-                <Button variant="primary">Go somewhere</Button>
+                <input value={item.title} />
               </Card.Body>
             </Card>
             <p></p>
