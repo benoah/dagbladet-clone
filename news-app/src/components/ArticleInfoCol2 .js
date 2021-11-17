@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Card } from "react-bootstrap/";
 
-export default function ArticleInfo({
-  article,
+export default function ArticleInfoCol2({
   url = "",
   title = "",
   imageUrl = "",
@@ -18,18 +17,12 @@ export default function ArticleInfo({
   const handleInputTitle = ({ target }) => {
     setInputTitle(target.value);
   };
-
   return (
     <div
-      className={`col-lg-${width} col-xl-${width}mt-4 pt-4  col-12 col-sm-6 column`}
+      className={`col-lg-${width} col-xl-${width} mt-5 col-12 col-sm-6 column`}
     >
-      <Card className={`article-preview`} style={{ height: "100%" }}>
-        <img
-          className="img-preview"
-          src={imageUrl}
-          style={{ width: "100%" }}
-          alt="article-preview"
-        />
+      <Card className={`article-preview`} style={{ background: "#f8a347" }}>
+        <img className="img-preview" src={imageUrl} alt="article-preview" />
         <div className="button-group">
           <button className="btn btn-secondary first" onClick={() => edit(url)}>
             Edit
@@ -38,6 +31,7 @@ export default function ArticleInfo({
             Delete
           </button>
         </div>
+        <h1> {title} </h1>
         {editUrl === url ? (
           <div className="editModeWrapper">
             <input value={inputTitle} onChange={(e) => handleInputTitle(e)} />
