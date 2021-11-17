@@ -58,6 +58,10 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
+.app-header {
+  background-color: #d60000;
+  height: var(--header-height);
+}
 h1,
 h2,
 h3,
@@ -67,61 +71,12 @@ h6 {
   color: var(--header-color);
 }
 
-.app-header {
-  background-color: #d60000;
-  height: var(--header-height);
-}
-
 .app-logo {
   background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Dagbladet_logo.svg/800px-Dagbladet_logo.svg.png")
     no-repeat 0 0;
   background-size: contain;
   height: var(--header-height);
   line-height: var(--header-height);
-}
-ol,
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-button {
-  border: none;
-  cursor: pointer;
-}
-
-button:focus {
-  outline: 0;
-  border: none;
-}
-
-.screen-only {
-  visibility: hidden;
-}
-.app-header > .container {
-  display: flex;
-  flex-grow: 1;
-  align-items: stretch;
-  height: inherit;
-  padding: 0 var(--default-pad-min);
-}
-
-.container {
-  margin: 0 auto;
-  max-width: var(--max-width);
-}
-
-.main-nav {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  height: var(--header-height);
-}
-
-.account-link {
-  padding-left: 10px !important;
-  padding-right: 20px !important;
 }
 
 .icon-account {
@@ -133,43 +88,6 @@ button:focus {
   width: 32px;
   margin-bottom: -3px;
   display: inline-block;
-}
-
-.more-link {
-  padding-left: 30px !important;
-  padding-right: 78px !important;
-}
-
-.main-nav li {
-  margin: 0;
-  padding: 0;
-}
-
-.main-nav li a {
-  color: #fff;
-  font-family: var(--default-font);
-  font-size: var(--default-nav-size);
-  font-weight: 600;
-  text-decoration: none;
-  border-left: 1px solid var(--nav-border-color);
-  padding: 14px var(--default-nav-padding);
-  height: var(--header-height);
-  line-height: var(--header-height);
-}
-
-.search {
-  position: relative;
-  line-height: var(--header-height);
-}
-
-.search-input {
-  width: 110px;
-  border: none;
-  background-color: #fff;
-  font-size: 13px;
-  font-weight: 800;
-  color: #333;
-  padding: 4px 6px;
 }
 
 .search-submit {
@@ -188,30 +106,9 @@ button:focus {
   border: none;
   background: transparent;
   color: #fff;
-  border: 1px solid solid #333;
+  border: 1px solid solid #fff;
   background-image: url("./image/iconfinder_icon-50-half-moon_315813.svg");
   background-size: cover;
   height: 40px;
   width: 40px;
 }
-
-.the-title {
-  font-size: 1rem !important;
-  color: var(--header-color);
-  font-weight: 800;
-}
-.the-date {
-  font-size: 1rem !important;
-  float: right;
-  color: var(--text-color-light);
-  font-weight: 300 !important;
-}
-
-.app-body {
-  padding-top: var(--default-pad-med);
-}
-
-.NewsHolder {
-  margin-top: 24px;
-}
-
